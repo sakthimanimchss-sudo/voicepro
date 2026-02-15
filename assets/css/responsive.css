@@ -439,7 +439,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   7. Tablet Portrait (768px)
+   7. Tablet Portrait (768px) - FIXED TITLE LAYOUT
    -------------------------------------------------------------------------- */
 
 @media screen and (max-width: 768px) {
@@ -447,6 +447,115 @@
         padding: 0 var(--spacing-4);
     }
 
+    /* Fixed Title Layout - Hero section */
+    .hero {
+        padding: var(--spacing-6) 0;
+    }
+
+    .hero-content {
+        margin-bottom: var(--spacing-4);
+    }
+
+    .hero-tag {
+        margin-bottom: var(--spacing-2);
+        font-size: var(--text-xs);
+        padding: var(--spacing-1) var(--spacing-3);
+        display: inline-block;
+    }
+
+    .hero-title {
+        font-size: var(--text-2xl);
+        line-height: 1.2;
+        margin-bottom: var(--spacing-2);
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-lg);
+        margin-bottom: var(--spacing-3);
+    }
+
+    .hero-description {
+        font-size: var(--text-sm);
+        margin-bottom: var(--spacing-4);
+    }
+
+    /* Button Layout - Stacked properly */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-3);
+        margin-bottom: var(--spacing-4);
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        margin: 0;
+        padding: var(--spacing-3) var(--spacing-4);
+        font-size: var(--text-sm);
+    }
+
+    /* Stats layout */
+    .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-3);
+        margin-bottom: var(--spacing-4);
+    }
+
+    .stat-item {
+        flex: 1 1 calc(50% - var(--spacing-3));
+        min-width: 120px;
+        padding: var(--spacing-3);
+    }
+
+    .stat-number {
+        font-size: var(--text-2xl);
+    }
+
+    .stat-label {
+        font-size: var(--text-xs);
+    }
+
+    /* Trust badges */
+    .trust-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-2);
+    }
+
+    .trust-badges span {
+        font-size: var(--text-xs);
+        padding: var(--spacing-1) var(--spacing-2);
+    }
+
+    /* Hero image */
+    .hero-image {
+        margin-top: var(--spacing-4);
+    }
+
+    .hero-image-wrapper {
+        max-width: 100%;
+    }
+
+    .hero-badge {
+        position: absolute;
+        bottom: var(--spacing-3);
+        right: var(--spacing-3);
+        padding: var(--spacing-2) var(--spacing-3);
+    }
+
+    .badge-stars {
+        font-size: var(--text-xs);
+    }
+
+    .badge-text {
+        font-size: var(--text-xs);
+    }
+
+    /* Rest of existing 768px styles remain exactly the same */
     h1 {
         font-size: var(--text-3xl);
     }
@@ -470,50 +579,6 @@
 
     .section-header p {
         font-size: var(--text-base);
-    }
-
-    .hero {
-        padding: var(--spacing-8) 0;
-    }
-
-    .hero-title {
-        font-size: var(--text-3xl);
-        margin-bottom: var(--spacing-4);
-    }
-
-    .hero-subtitle {
-        font-size: var(--text-lg);
-        margin-bottom: var(--spacing-4);
-    }
-
-    .hero-description {
-        font-size: var(--text-base);
-        margin-bottom: var(--spacing-6);
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        gap: var(--spacing-3);
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-    }
-
-    .hero-stats {
-        flex-direction: column;
-        gap: var(--spacing-4);
-    }
-
-    .stat-item {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--color-gray-200);
-        padding: var(--spacing-4);
-    }
-
-    .stat-item:last-child {
-        border-bottom: none;
     }
 
     .services-grid {
