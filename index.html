@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceMaster Pro | Award-Winning Professional Voice Over Studio</title>
+    <meta name="description" content="Premium voice over services for commercial, narration, corporate, and character projects. Professional studio quality with 24-hour turnaround. 500+ projects completed.">
+    <meta name="keywords" content="voice over, voice actor, commercial voice, narration, corporate video, character voice, studio recording">
+    <meta name="author" content="VoiceMaster Pro">
+    
+    <!-- Open Graph / Social Media Meta -->
+    <meta property="og:title" content="VoiceMaster Pro - Professional Voice Over Studio">
+    <meta property="og:description" content="Award-winning voice over services that connect. Studio-quality audio with 24-hour turnaround.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200">
+    <meta property="og:url" content="https://voicemasterpro.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VoiceMaster Pro - Professional Voice Over Studio">
+    <meta name="twitter:description" content="Award-winning voice over services that connect. Studio-quality audio with 24-hour turnaround.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/000/microphone.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/color/180/000/microphone.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/32/000/microphone.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/color/16/000/microphone.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Minimal inline styles to prevent FOUC and ensure theme toggle is visible */
+        .theme-toggle-btn { background: none; border: none; cursor: pointer; font-size: 1.4rem; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: var(--transition-normal); color: var(--text-primary); background: var(--bg-light); margin-left: 0.5rem; }
+        .header-content { display: flex; align-items: center; justify-content: space-between; }
+        .nav-cta.desktop-only { display: flex; align-items: center; gap: 0.5rem; }
+        [data-theme="dark"] .theme-toggle-btn .fa-moon { display: none; }
+        [data-theme="dark"] .theme-toggle-btn .fa-sun { display: inline-block; }
+        [data-theme="light"] .theme-toggle-btn .fa-sun { display: none; }
+        [data-theme="light"] .theme-toggle-btn .fa-moon { display: inline-block; }
+        .theme-toggle-btn .fa-sun { color: #f5b342; }
+    </style>
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <img src="https://img.icons8.com/color/96/000/microphone.png" alt="VoiceMaster Pro" style="width: 80px; height: 80px;">
+            </div>
+            <div class="preloader-wave">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p>Loading studio...</p>
+        </div>
+    </div>
+
+    <!-- Header / Navigation with Hamburger Menu and Dropdowns -->
+    <header class="header header-sticky">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" aria-label="VoiceMaster Pro Home">
+                        <span style="font-size: 28px; font-weight: 900; color: var(--primary-color); font-family: 'Playfair Display', serif;">VoiceMaster<span style="color: var(--accent-color);">Pro</span></span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation with Dropdowns -->
+                <nav class="nav-desktop" aria-label="Desktop navigation">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active">
+                                <i class="fas fa-home"></i>
+                                <span class="nav-text">Home</span>
+                                <span class="nav-highlight"></span>
+                            </a>
+                        </li>
+                        
+                        <!-- Services Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a href="services.html" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-concierge-bell"></i> 
+                                <span class="nav-text">Services</span>
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                <span class="nav-highlight"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="commercial.html">
+                                        <i class="fas fa-tv"></i>
+                                        <span>Commercial</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="narration.html">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Narration</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="corporate.html">
+                                        <i class="fas fa-building"></i>
+                                        <span>Corporate</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="character.html">
+                                        <i class="fas fa-theater-masks"></i>
+                                        <span>Character</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="demos.html" class="nav-link">
+                                <i class="fas fa-headphones"></i>
+                                <span class="nav-text">Demos</span>
+                                <span class="nav-highlight"></span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="studio.html" class="nav-link">
+                                <i class="fas fa-microphone-alt"></i>
+                                <span class="nav-text">Studio</span>
+                                <span class="nav-highlight"></span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="process.html" class="nav-link">
+                                <i class="fas fa-gears"></i>
+                                <span class="nav-text">Process</span>
+                                <span class="nav-highlight"></span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="testimonials.html" class="nav-link">
+                                <i class="fas fa-star"></i>
+                                <span class="nav-text">Testimonials</span>
+                                <span class="nav-highlight"></span>
+                            </a>
+                        </li>
+                        
+                        <!-- Contact Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a href="contact.html" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope"></i> 
+                                <span class="nav-text">Contact</span>
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                <span class="nav-highlight"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="terms.html">
+                                        <i class="fas fa-file-contract"></i>
+                                        <span>Terms</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="sitemap.html">
+                                        <i class="fas fa-sitemap"></i>
+                                        <span>Sitemap</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="process.html">
+                                        <i class="fas fa-diagram-project"></i>
+                                        <span>Process</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="privacy.html">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Privacy</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Desktop CTA Button + Theme Toggle -->
+                <div class="nav-cta desktop-only">
+                    <a href="contact.html" class="btn btn-small btn-primary">
+                        <i class="fas fa-calendar-check"></i> Start Project
+                    </a>
+                    <!-- Dark/Light Mode Toggle Button -->
+                    <button id="themeToggle" class="theme-toggle-btn" aria-label="Switch between dark and light mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button class="hamburger-menu" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+                    <span class="hamburger-line line1"></span>
+                    <span class="hamburger-line line2"></span>
+                    <span class="hamburger-line line3"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Overlay with Dropdowns -->
+        <div class="nav-mobile-overlay" id="mobileNav">
+            <div class="nav-mobile-content">
+                <div class="nav-mobile-header">
+                    <span style="font-size: 24px; font-weight: 800; color: var(--primary-color);">VoiceMasterPro</span>
+                    <button class="close-menu" aria-label="Close menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <nav class="nav-mobile" aria-label="Mobile navigation">
+                    <ul class="nav-mobile-menu">
+                        <li class="mobile-nav-item">
+                            <a href="index.html" class="mobile-nav-link active">
+                                <i class="fas fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        
+                        <!-- Mobile Services Dropdown -->
+                        <li class="mobile-nav-item mobile-dropdown">
+                            <div class="mobile-dropdown-header">
+                                <a href="services.html" class="mobile-nav-link">
+                                    <i class="fas fa-concierge-bell"></i>
+                                    <span>Services</span>
+                                </a>
+                                <button class="mobile-dropdown-toggle">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <ul class="mobile-dropdown-menu">
+                                <li class="mobile-dropdown-item">
+                                    <a href="commercial.html">
+                                        <i class="fas fa-tv"></i>
+                                        <span>Commercial</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="narration.html">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Narration</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="corporate.html">
+                                        <i class="fas fa-building"></i>
+                                        <span>Corporate</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="character.html">
+                                        <i class="fas fa-theater-masks"></i>
+                                        <span>Character</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="mobile-nav-item">
+                            <a href="demos.html" class="mobile-nav-link">
+                                <i class="fas fa-headphones"></i>
+                                <span>Demos</span>
+                            </a>
+                        </li>
+                        
+                        <li class="mobile-nav-item">
+                            <a href="studio.html" class="mobile-nav-link">
+                                <i class="fas fa-microphone-alt"></i>
+                                <span>Studio</span>
+                            </a>
+                        </li>
+                        
+                        <li class="mobile-nav-item">
+                            <a href="process.html" class="mobile-nav-link">
+                                <i class="fas fa-gears"></i>
+                                <span>Process</span>
+                            </a>
+                        </li>
+                        
+                        <li class="mobile-nav-item">
+                            <a href="testimonials.html" class="mobile-nav-link">
+                                <i class="fas fa-star"></i>
+                                <span>Testimonials</span>
+                            </a>
+                        </li>
+                        
+                        <!-- Mobile Contact Dropdown -->
+                        <li class="mobile-nav-item mobile-dropdown">
+                            <div class="mobile-dropdown-header">
+                                <a href="contact.html" class="mobile-nav-link">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Contact</span>
+                                </a>
+                                <button class="mobile-dropdown-toggle">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <ul class="mobile-dropdown-menu">
+                                <li class="mobile-dropdown-item">
+                                    <a href="terms.html">
+                                        <i class="fas fa-file-contract"></i>
+                                        <span>Terms</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="sitemap.html">
+                                        <i class="fas fa-sitemap"></i>
+                                        <span>Sitemap</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="process.html">
+                                        <i class="fas fa-diagram-project"></i>
+                                        <span>Process</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="privacy.html">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Privacy</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="nav-mobile-footer">
+                    <div class="nav-mobile-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+                    </div>
+                    <div class="nav-mobile-cta">
+                        <a href="contact.html" class="btn btn-primary btn-block">
+                            <i class="fas fa-calendar-check"></i> Start Your Project
+                        </a>
+                    </div>
+                    <div class="nav-mobile-contact">
+                        <p><i class="fas fa-phone"></i> +1 (888) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> studio@voicemasterpro.com</p>
+                    </div>
+                    <!-- Mobile theme toggle (optional) -->
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <button id="mobileThemeToggle" class="theme-toggle-btn" aria-label="Switch theme">
+                            <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                        <span class="hero-tag">✦ Pro</span>
+                        <h1 class="hero-title">
+                            <span class="title-accent">Award-Winning</span>
+                            Voice Studio
+                        </h1>
+                        <h2 class="hero-subtitle">Professional Voice Over That Connects</h2>
+                        <p class="hero-description">
+                            Deliver your message with impact. From commercial spots to character voices, 
+                            we provide studio-quality audio that engages audiences and drives results.
+                        </p>
+                        
+                        <!-- Hero Buttons -->
+                        <div class="hero-buttons">
+                            <a href="demos.html" class="btn btn-primary btn-large">
+                                <i class="fas fa-headphones"></i> Listen to Demos
+                            </a>
+                            <a href="contact.html" class="btn btn-outline btn-large">
+                                <i class="fas fa-microphone"></i> Start Your Project
+                            </a>
+                        </div>
+                        
+                        <!-- Hero Stats -->
+                        <div class="hero-stats">
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">PROJECTS COMPLETED</span>
+                            </div>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">HAPPY CLIENTS</span>
+                            </div>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                                <span class="stat-number">24h</span>
+                                <span class="stat-label">TURNAROUND</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Trust Badges -->
+                        <div class="trust-badges" data-aos="fade-up" data-aos-delay="500">
+                            <span><i class="fas fa-check-circle"></i> Broadcast Quality</span>
+                            <span><i class="fas fa-check-circle"></i> ISO Certified Studio</span>
+                            <span><i class="fas fa-check-circle"></i> 100% Satisfaction</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="hero-image-wrapper">
+                            <img src="assets/images/studio/453169-audio-720589_1920.jpg" alt="Voice artist in professional studio" loading="eager" style="width: 100%; border-radius: 20px;">
+                            <div class="hero-badge">
+                                <div class="badge-content">
+                                    <span class="badge-stars">★★★★★</span>
+                                    <p class="badge-text">Trusted by 150+ brands</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Audio Wave Animation -->
+                            <div class="hero-wave">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Background Elements -->
+            <div class="hero-bg-elements">
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+            </div>
+        </section>
+
+        <!-- Voice Recording Demo Section with Audio Player -->
+        <section class="voice-demo">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Voice Samples</span>
+                    <h2>Professional Voice Recording Demos</h2>
+                    <p>Experience our studio-quality audio across different genres and styles</p>
+                </div>
+                
+                <!-- Voice Recording Player -->
+                <div class="voice-player-container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="voice-player-header">
+                        <div class="voice-player-info">
+                            <div class="voice-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop" alt="Voice Artist" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                                <span class="live-badge">LIVE</span>
+                            </div>
+                            <div class="voice-details">
+                                <h3>James Anderson</h3>
+                                <p>Lead Voice Artist • 15+ years experience</p>
+                            </div>
+                        </div>
+                        <div class="voice-studio-indicator">
+                            <i class="fas fa-circle"></i>
+                            <span>Studio Quality 48kHz/24bit</span>
+                        </div>
+                    </div>
+                    
+                    <div class="voice-waveform">
+                        <canvas id="waveformCanvas" width="800" height="100"></canvas>
+                        <div class="waveform-progress" style="width: 0%"></div>
+                    </div>
+                    
+                    <div class="voice-controls">
+                        <div class="controls-left">
+                            <button class="control-btn play-pause" id="playPauseBtn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="time-display">
+                                <span id="currentTime">0:00</span>
+                                <span>/</span>
+                                <span id="duration">3:45</span>
+                            </div>
+                        </div>
+                        
+                        <div class="controls-center">
+                            <button class="control-btn" id="prevTrack">
+                                <i class="fas fa-backward"></i>
+                            </button>
+                            <button class="control-btn" id="nextTrack">
+                                <i class="fas fa-forward"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="controls-right">
+                            <button class="control-btn volume-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <div class="volume-slider-container">
+                                <input type="range" class="volume-slider" min="0" max="100" value="80">
+                            </div>
+                            <button class="control-btn download-btn">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <button class="control-btn share-btn">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Playlist -->
+                    <div class="voice-playlist">
+                        <h4>Demo Reel <span>(4 tracks)</span></h4>
+                        <ul class="playlist">
+                            <li class="playlist-item active" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+                                <div class="track-info">
+                                    <span class="track-number">01</span>
+                                    <div class="track-details">
+                                        <span class="track-name">Commercial - Tech Startup</span>
+                                        <span class="track-style">Energizing, Modern</span>
+                                    </div>
+                                </div>
+                                <div class="track-meta">
+                                    <span class="track-duration">1:24</span>
+                                    <button class="track-play"><i class="fas fa-play"></i></button>
+                                </div>
+                            </li>
+                            <li class="playlist-item" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
+                                <div class="track-info">
+                                    <span class="track-number">02</span>
+                                    <div class="track-details">
+                                        <span class="track-name">Narration - Documentary</span>
+                                        <span class="track-style">Warm, Authoritative</span>
+                                    </div>
+                                </div>
+                                <div class="track-meta">
+                                    <span class="track-duration">2:15</span>
+                                    <button class="track-play"><i class="fas fa-play"></i></button>
+                                </div>
+                            </li>
+                            <li class="playlist-item" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">
+                                <div class="track-info">
+                                    <span class="track-number">03</span>
+                                    <div class="track-details">
+                                        <span class="track-name">Corporate - Annual Report</span>
+                                        <span class="track-style">Professional, Clear</span>
+                                    </div>
+                                </div>
+                                <div class="track-meta">
+                                    <span class="track-duration">1:56</span>
+                                    <button class="track-play"><i class="fas fa-play"></i></button>
+                                </div>
+                            </li>
+                            <li class="playlist-item" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3">
+                                <div class="track-info">
+                                    <span class="track-number">04</span>
+                                    <div class="track-details">
+                                        <span class="track-name">Character - Animated Series</span>
+                                        <span class="track-style">Versatile, Expressive</span>
+                                    </div>
+                                </div>
+                                <div class="track-meta">
+                                    <span class="track-duration">2:30</span>
+                                    <button class="track-play"><i class="fas fa-play"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid Section -->
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Our Expertise</span>
+                    <h2>Voice Over Services</h2>
+                    <p>Professional voice solutions tailored to your specific needs</p>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Commercial Service Card -->
+                    <div class="service-card" data-aos="flip-left" data-aos-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h3>Commercial</h3>
+                        <p>TV, radio, and digital ads that capture attention and drive engagement. Voice that sells.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> TV & Radio Spots</li>
+                            <li><i class="fas fa-check"></i> Social Media Ads</li>
+                            <li><i class="fas fa-check"></i> Promo Videos</li>
+                        </ul>
+                        <div class="service-audio-preview">
+                            <button class="audio-preview-btn" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+                                <i class="fas fa-headphones"></i> Preview
+                            </button>
+                            <span class="demo-duration">1:24</span>
+                        </div>
+                        <a href="commercial.html" class="service-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Narration Service Card -->
+                    <div class="service-card" data-aos="flip-left" data-aos-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Narration</h3>
+                        <p>Documentaries, audiobooks, and explainer videos with engaging, authoritative delivery.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Audiobooks</li>
+                            <li><i class="fas fa-check"></i> Documentaries</li>
+                            <li><i class="fas fa-check"></i> E-Learning</li>
+                        </ul>
+                        <div class="service-audio-preview">
+                            <button class="audio-preview-btn" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
+                                <i class="fas fa-headphones"></i> Preview
+                            </button>
+                            <span class="demo-duration">2:15</span>
+                        </div>
+                        <a href="narration.html" class="service-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Corporate Service Card -->
+                    <div class="service-card" data-aos="flip-left" data-aos-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Corporate</h3>
+                        <p>Training videos, presentations, and IVR systems with professional, trustworthy tone.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Training Videos</li>
+                            <li><i class="fas fa-check"></i> IVR & Phone Systems</li>
+                            <li><i class="fas fa-check"></i> Presentations</li>
+                        </ul>
+                        <div class="service-audio-preview">
+                            <button class="audio-preview-btn" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">
+                                <i class="fas fa-headphones"></i> Preview
+                            </button>
+                            <span class="demo-duration">1:56</span>
+                        </div>
+                        <a href="corporate.html" class="service-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Character Service Card -->
+                    <div class="service-card" data-aos="flip-left" data-aos-delay="400">
+                        <div class="service-icon">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <h3>Character</h3>
+                        <p>Animation, video games, and creative projects with versatile, expressive character voices.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Animation</li>
+                            <li><i class="fas fa-check"></i> Video Games</li>
+                            <li><i class="fas fa-check"></i> Creative Projects</li>
+                        </ul>
+                        <div class="service-audio-preview">
+                            <button class="audio-preview-btn" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3">
+                                <i class="fas fa-headphones"></i> Preview
+                            </button>
+                            <span class="demo-duration">2:30</span>
+                        </div>
+                        <a href="character.html" class="service-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Studio Feature Section -->
+        <section class="studio-feature">
+            <div class="container">
+                <div class="studio-grid">
+                    <div class="studio-content" data-aos="fade-right">
+                        <span class="section-tag">Professional Studio</span>
+                        <h2>Broadcast-Quality Recording Environment</h2>
+                        <p>Our state-of-the-art studio is equipped with industry-leading microphones, preamps, and acoustic treatment to deliver pristine audio for any project.</p>
+                        
+                        <div class="studio-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-microphone"></i>
+                                <div class="spec-info">
+                                    <h4>Neumann U87 AI</h4>
+                                    <p>Industry standard condenser microphone</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-sliders-h"></i>
+                                <div class="spec-info">
+                                    <h4>Universal Audio Apollo</h4>
+                                    <p>Professional preamp & interface</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-volume-mute"></i>
+                                <div class="spec-info">
+                                    <h4>Acoustic Treatment</h4>
+                                    <p>Voice-optimized isolation booth</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-headphones"></i>
+                                <div class="spec-info">
+                                    <h4>Real-time Direction</h4>
+                                    <p>Live remote direction available</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="studio.html" class="btn btn-outline">
+                            Tour Our Studio <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="studio-images" data-aos="fade-left">
+                        <div class="image-grid">
+                            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&auto=format&fit=crop" alt="Recording Studio Main Room" class="img-main" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                <img src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?w=300&auto=format&fit=crop" alt="Microphone Setup" class="img-small" style="width: 100%; border-radius: 10px;">
+                                <img src="https://images.unsplash.com/photo-1618609377864-68609b857e90?w=300&auto=format&fit=crop" alt="Audio Interface" class="img-small" style="width: 100%; border-radius: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Simple Process</span>
+                    <h2>From Script to Studio in 4 Steps</h2>
+                    <p>Our streamlined workflow ensures quick turnaround without compromising quality</p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Submit Script</h3>
+                        <p>Upload your script and specify project requirements, tone, and deadline</p>
+                    </div>
+                    
+                    <div class="step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3>Professional Recording</h3>
+                        <p>Our voice artist records your script in our broadcast-quality studio</p>
+                    </div>
+                    
+                    <div class="step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3>Editing & Mastering</h3>
+                        <p>Professional audio engineering for crystal clear, broadcast-ready sound</p>
+                    </div>
+                    
+                    <div class="step" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-number">04</div>
+                        <div class="step-icon">
+                            <i class="fas fa-cloud-download-alt"></i>
+                        </div>
+                        <h3>Delivery</h3>
+                        <p>Receive your final files in any format, delivered within 24-48 hours</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Client Success</span>
+                    <h2>Trusted by Industry Leaders</h2>
+                    <p>What our clients say about working with VoiceMaster Pro</p>
+                </div>
+                
+                <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"VoiceMaster Pro delivered exceptional quality for our national TV campaign. The voice talent understood our brand perfectly and the turnaround was incredible. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Marketing Director, TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"We've used VoiceMaster Pro for three corporate training series. Consistent quality, professional communication, and they always deliver ahead of schedule. Our go-to voice studio."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Michael Chen" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Training Manager, GlobalFinance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content" data-aos="zoom-in">
+                    <h2>Ready to Bring Your Script to Life?</h2>
+                    <p>Get a free quote within 24 hours. No obligation, just professional advice.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-large">
+                            <i class="fas fa-calendar-check"></i> Start Your Project
+                        </a>
+                        <a href="demos.html" class="btn btn-outline-light btn-large">
+                            <i class="fas fa-headphones"></i> Listen to Demos
+                        </a>
+                    </div>
+                    <div class="cta-contact">
+                        <span><i class="fas fa-phone"></i> +1 (888) 123-4567</span>
+                        <span><i class="fas fa-envelope"></i> studio@voicemasterpro.com</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col footer-brand">
+                    <span style="font-size: 28px; font-weight: 900; color: var(--primary-color); font-family: 'Playfair Display', serif;">VoiceMaster<span style="color: var(--accent-color);">Pro</span></span>
+                    <p>Professional voice over services that connect. Award-winning studio with 15+ years of experience in commercial, narration, corporate, and character voice overs.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="demos.html">Demos</a></li>
+                        <li><a href="studio.html">Studio</a></li>
+                        <li><a href="process.html">Process</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="narration.html">Narration</a></li>
+                        <li><a href="corporate.html">Corporate</a></li>
+                        <li><a href="character.html">Character</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Recording Ave, Studio City, CA 91604</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (888) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>studio@voicemasterpro.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Fri: 9am - 6pm PST</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Links -->
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 VoiceMaster Pro. All rights reserved. Award-winning voice over studio.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+        <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/audio-player.js"></script>
+    <script src="assets/js/home.js"></script>
+    <!-- Initialize AOS -->
+     
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+    <!-- Inline theme toggle script to ensure functionality even if external theme.js is missing -->
+    <script>
+        (function() {
+            // Theme toggle functionality
+            function setTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                // Update icons if needed (handled by CSS)
+            }
+
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                setTheme(newTheme);
+            }
+
+            // Apply saved theme on load
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+
+            // Attach event listeners to theme toggle buttons
+            window.addEventListener('load', function() {
+                const themeBtn = document.getElementById('themeToggle');
+                const mobileThemeBtn = document.getElementById('mobileThemeToggle');
+                
+                if (themeBtn) {
+                    themeBtn.addEventListener('click', toggleTheme);
+                }
+                if (mobileThemeBtn) {
+                    mobileThemeBtn.addEventListener('click', toggleTheme);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

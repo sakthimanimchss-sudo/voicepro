@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | VoiceMaster Pro - Professional Voice Over Studio</title>
+    <meta name="description" content="Get in touch with VoiceMaster Pro for voice over quotes, project inquiries, or studio bookings. Free quotes within 24 hours. Call or email us today.">
+    <meta name="keywords" content="voice over contact, voice actor booking, studio booking, voice over quote">
+    <meta name="author" content="VoiceMaster Pro">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us | VoiceMaster Pro">
+    <meta property="og:description" content="Get in touch for voice over quotes, project inquiries, or studio bookings. Free quotes within 24 hours.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200">
+    <meta property="og:url" content="https://voicemasterpro.com/contact.html">
+    <meta property="og:type" content="website">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/000/microphone.png">
+    <link rel="apple-touch-icon" href="https://img.icons8.com/color/180/000/microphone.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Inline theme styles to prevent FOUC -->
+    <style>
+        .theme-toggle-btn { background: none; border: none; cursor: pointer; font-size: 1.4rem; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; color: var(--text-primary); background: var(--color-purple-100); margin-left: 0.5rem; border: 1px solid var(--border-color); }
+        .nav-cta.desktop-only { display: flex; align-items: center; gap: 0.5rem; }
+        [data-theme="dark"] .theme-toggle-btn .fa-moon { display: none; }
+        [data-theme="dark"] .theme-toggle-btn .fa-sun { display: inline-block; color: #f5b342; }
+        [data-theme="light"] .theme-toggle-btn .fa-sun { display: none; }
+        [data-theme="light"] .theme-toggle-btn .fa-moon { display: inline-block; }
+        .header-content { display: flex; align-items: center; justify-content: space-between; }
+    </style>
+</head>
+<body>
+    <!-- Skip to content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <img src="https://img.icons8.com/color/96/000/microphone.png" alt="VoiceMaster Pro" style="width: 80px; height: 80px;">
+            </div>
+            <div class="preloader-wave">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Header with Dropdown Navigation -->
+    <header class="header header-sticky">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" aria-label="VoiceMaster Pro Home">
+                        <span style="font-size: 28px; font-weight: 900; color: var(--primary-color); font-family: 'Playfair Display', serif;">VoiceMaster<span style="color: var(--accent-color);">Pro</span></span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation with Dropdowns -->
+                <nav class="nav-desktop" aria-label="Desktop navigation">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                <span class="nav-text">Home</span>
+                                <span class="nav-highlight"></span>
+                            </a>
+                        </li>
+                        
+                        <!-- Services Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a href="services.html" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-concierge-bell"></i> 
+                                <span class="nav-text">Services</span>
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                <span class="nav-highlight"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="commercial.html">
+                                        <i class="fas fa-tv"></i>
+                                        <span>Commercial</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="narration.html">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Narration</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="corporate.html">
+                                        <i class="fas fa-building"></i>
+                                        <span>Corporate</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="character.html">
+                                        <i class="fas fa-theater-masks"></i>
+                                        <span>Character</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="demos.html" class="nav-link">
+                                <i class="fas fa-headphones"></i>
+                                <span class="nav-text">Demos</span>
+                                <span class="nav-highlight"></span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="studio.html" class="nav-link">
+                                <i class="fas fa-microphone-alt"></i>
+                                <span class="nav-text">Studio</span>
+                                <span class="nav-highlight"></span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="process.html" class="nav-link">
+                                <i class="fas fa-gears"></i>
+                                <span class="nav-text">Process</span>
+                                <span class="nav-highlight"></span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="testimonials.html" class="nav-link">
+                                <i class="fas fa-star"></i>
+                                <span class="nav-text">Testimonials</span>
+                                <span class="nav-highlight"></span>
+                            </a>
+                        </li>
+                        
+                        <!-- Contact Dropdown - Active -->
+                        <li class="nav-item dropdown active">
+                            <a href="contact.html" class="nav-link active" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope"></i> 
+                                <span class="nav-text">Contact</span>
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                <span class="nav-highlight"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="terms.html">
+                                        <i class="fas fa-file-contract"></i>
+                                        <span>Terms</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="sitemap.html">
+                                        <i class="fas fa-sitemap"></i>
+                                        <span>Sitemap</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="process.html">
+                                        <i class="fas fa-diagram-project"></i>
+                                        <span>Process</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="privacy.html">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Privacy</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Desktop CTA + Theme Toggle -->
+                <div class="nav-cta desktop-only">
+                    <a href="contact.html" class="btn btn-small btn-primary">
+                        <i class="fas fa-calendar-check"></i> Start Project
+                    </a>
+                    <!-- Dark/Light Mode Toggle Button -->
+                    <button id="themeToggle" class="theme-toggle-btn" aria-label="Switch between dark and light mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                
+                <!-- Hamburger Menu -->
+                <button class="hamburger-menu" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+                    <span class="hamburger-line line1"></span>
+                    <span class="hamburger-line line2"></span>
+                    <span class="hamburger-line line3"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile-overlay" id="mobileNav">
+            <div class="nav-mobile-content">
+                <div class="nav-mobile-header">
+                    <span style="font-size: 24px; font-weight: 800; color: var(--primary-color);">VoiceMasterPro</span>
+                    <button class="close-menu" aria-label="Close menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <nav class="nav-mobile">
+                    <ul class="nav-mobile-menu">
+                        <li class="mobile-nav-item">
+                            <a href="index.html" class="mobile-nav-link">
+                                <i class="fas fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        
+                        <!-- Mobile Services Dropdown -->
+                        <li class="mobile-nav-item mobile-dropdown">
+                            <div class="mobile-dropdown-header">
+                                <a href="services.html" class="mobile-nav-link">
+                                    <i class="fas fa-concierge-bell"></i>
+                                    <span>Services</span>
+                                </a>
+                                <button class="mobile-dropdown-toggle">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <ul class="mobile-dropdown-menu">
+                                <li class="mobile-dropdown-item">
+                                    <a href="commercial.html">
+                                        <i class="fas fa-tv"></i>
+                                        <span>Commercial</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="narration.html">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Narration</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="corporate.html">
+                                        <i class="fas fa-building"></i>
+                                        <span>Corporate</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="character.html">
+                                        <i class="fas fa-theater-masks"></i>
+                                        <span>Character</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="mobile-nav-item">
+                            <a href="demos.html" class="mobile-nav-link">
+                                <i class="fas fa-headphones"></i>
+                                <span>Demos</span>
+                            </a>
+                        </li>
+                        
+                        <li class="mobile-nav-item">
+                            <a href="studio.html" class="mobile-nav-link">
+                                <i class="fas fa-microphone-alt"></i>
+                                <span>Studio</span>
+                            </a>
+                        </li>
+                        
+                        <li class="mobile-nav-item">
+                            <a href="process.html" class="mobile-nav-link">
+                                <i class="fas fa-gears"></i>
+                                <span>Process</span>
+                            </a>
+                        </li>
+                        
+                        <li class="mobile-nav-item">
+                            <a href="testimonials.html" class="mobile-nav-link">
+                                <i class="fas fa-star"></i>
+                                <span>Testimonials</span>
+                            </a>
+                        </li>
+                        
+                        <!-- Mobile Contact Dropdown - Active -->
+                        <li class="mobile-nav-item mobile-dropdown active">
+                            <div class="mobile-dropdown-header">
+                                <a href="contact.html" class="mobile-nav-link active">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Contact</span>
+                                </a>
+                                <button class="mobile-dropdown-toggle">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <ul class="mobile-dropdown-menu">
+                                <li class="mobile-dropdown-item">
+                                    <a href="terms.html">
+                                        <i class="fas fa-file-contract"></i>
+                                        <span>Terms</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="sitemap.html">
+                                        <i class="fas fa-sitemap"></i>
+                                        <span>Sitemap</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="process.html">
+                                        <i class="fas fa-diagram-project"></i>
+                                        <span>Process</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                                <li class="mobile-dropdown-item">
+                                    <a href="privacy.html">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Privacy</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="nav-mobile-footer">
+                    <div class="nav-mobile-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+                    </div>
+                    <div class="nav-mobile-cta">
+                        <a href="contact.html" class="btn btn-primary btn-block">
+                            <i class="fas fa-calendar-check"></i> Start Your Project
+                        </a>
+                    </div>
+                    <div class="nav-mobile-contact">
+                        <p><i class="fas fa-phone"></i> +1 (888) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> studio@voicemasterpro.com</p>
+                    </div>
+                    <!-- Mobile theme toggle -->
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <button id="mobileThemeToggle" class="theme-toggle-btn" aria-label="Switch theme">
+                            <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header page-header-contact">
+            <div class="container">
+                <div class="page-header-content" data-aos="fade-up">
+                    <span class="page-tag">Contact Us</span>
+                    <h1>Get in Touch.<br>Start Your Project.</h1>
+                    <p class="page-description">Free quotes within 24 hours. No obligation, just professional advice.</p>
+                    <div class="breadcrumbs">
+                        <a href="index.html">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Contact</span>
+                    </div>
+                </div>
+            </div>
+            <div class="page-header-bg">
+                <div class="wave wave1"></div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info" data-aos="fade-right">
+                        <div class="contact-info-header">
+                            <span class="section-tag">Connect With Us</span>
+                            <h2>Let's Work Together</h2>
+                            <p class="contact-description">Whether you're ready to start a project or just exploring options, we're here to help. Reach out through any of these channels.</p>
+                        </div>
+                        
+                        <div class="contact-details">
+                            <!-- Phone -->
+                            <div class="contact-detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <h3>Call Us</h3>
+                                    <p>Main Studio: +1 (888) 123-4567</p>
+                                    <p>Toll Free: +1 (800) 987-6543</p>
+                                    <p class="detail-note">Mon-Fri, 9am-6pm PST</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="contact-detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <h3>Email Us</h3>
+                                    <p>General Inquiries: studio@voicemasterpro.com</p>
+                                    <p>Project Quotes: quotes@voicemasterpro.com</p>
+                                    <p>Studio Bookings: bookings@voicemasterpro.com</p>
+                                    <p class="detail-note">Response within 4 hours</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Studio Location -->
+                            <div class="contact-detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <h3>Visit Our Studio</h3>
+                                    <p>123 Recording Avenue</p>
+                                    <p>Suite 200</p>
+                                    <p>Studio City, CA 91604</p>
+                                    <p class="detail-note">By appointment only</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Social Media -->
+                            <div class="contact-detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <h3>Follow Us</h3>
+                                    <div class="social-links-large">
+                                        <a href="#" class="social-link" aria-label="Instagram">
+                                            <i class="fab fa-instagram"></i>
+                                            <span>@VoiceMasterPro</span>
+                                        </a>
+                                        <a href="#" class="social-link" aria-label="Facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                            <span>VoiceMasterPro</span>
+                                        </a>
+                                        <a href="#" class="social-link" aria-label="Twitter">
+                                            <i class="fab fa-twitter"></i>
+                                            <span>@VoiceMasterPro</span>
+                                        </a>
+                                        <a href="#" class="social-link" aria-label="LinkedIn">
+                                            <i class="fab fa-linkedin-in"></i>
+                                            <span>VoiceMaster Pro</span>
+                                        </a>
+                                        <a href="#" class="social-link" aria-label="SoundCloud">
+                                            <i class="fab fa-soundcloud"></i>
+                                            <span>/VoiceMasterPro</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Hours -->
+                        <div class="business-hours">
+                            <h3><i class="fas fa-clock"></i> Studio Hours</h3>
+                            <div class="hours-grid">
+                                <div class="hours-row">
+                                    <span class="day">Monday - Friday</span>
+                                    <span class="time">9:00 AM - 6:00 PM PST</span>
+                                </div>
+                                <div class="hours-row">
+                                    <span class="day">Saturday</span>
+                                    <span class="time">10:00 AM - 4:00 PM PST</span>
+                                </div>
+                                <div class="hours-row">
+                                    <span class="day">Sunday</span>
+                                    <span class="time">Closed (Session recording available)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper" data-aos="fade-left">
+                        <div class="form-header">
+                            <h2>Send Us a Message</h2>
+                            <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <!-- Project Type -->
+                            <div class="form-group">
+                                <label for="projectType">I'm interested in *</label>
+                                <select id="projectType" name="projectType" required>
+                                    <option value="" disabled selected>Select a service</option>
+                                    <option value="commercial">Commercial Voice Over</option>
+                                    <option value="narration">Narration Voice Over</option>
+                                    <option value="corporate">Corporate Voice Over</option>
+                                    <option value="character">Character Voice Over</option>
+                                    <option value="other">Other / Not sure</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Name -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            </div>
+                            
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                            </div>
+                            
+                            <!-- Company -->
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company" placeholder="Your company name">
+                            </div>
+                            
+                            <!-- Project Timeline -->
+                            <div class="form-group">
+                                <label for="timeline">When do you need this completed? *</label>
+                                <select id="timeline" name="timeline" required>
+                                    <option value="" disabled selected>Select timeline</option>
+                                    <option value="rush">Rush - 24 hours</option>
+                                    <option value="standard">Standard - 48 hours</option>
+                                    <option value="extended">Extended - 3-5 days</option>
+                                    <option value="flexible">Flexible - No deadline</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Script Word Count -->
+                            <div class="form-group">
+                                <label for="wordCount">Approximate script length</label>
+                                <select id="wordCount" name="wordCount">
+                                    <option value="" disabled selected>Select word count</option>
+                                    <option value="<100">Less than 100 words</option>
+                                    <option value="100-500">100-500 words</option>
+                                    <option value="500-1000">500-1000 words</option>
+                                    <option value="1000-5000">1000-5000 words</option>
+                                    <option value="5000+">5000+ words</option>
+                                    <option value="unknown">Not sure yet</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label for="message">Tell us about your project *</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Describe your project, target audience, desired tone, and any other important details..." required></textarea>
+                            </div>
+                            
+                            <!-- File Upload -->
+                            <div class="form-group">
+                                <label for="scriptUpload">Upload Script (Optional)</label>
+                                <div class="file-upload">
+                                    <input type="file" id="scriptUpload" name="scriptUpload" accept=".txt,.doc,.docx,.pdf">
+                                    <div class="file-upload-label">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Drag & drop or click to upload</span>
+                                        <span class="file-types">Supports .txt, .doc, .docx, .pdf (Max 10MB)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Additional Services -->
+                            <div class="form-group">
+                                <label>Additional services you may need:</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="additional[]" value="music">
+                                        <span class="checkmark"></span>
+                                        Music licensing
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="additional[]" value="sfx">
+                                        <span class="checkmark"></span>
+                                        Sound effects
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="additional[]" value="mixing">
+                                        <span class="checkmark"></span>
+                                        Audio mixing/mastering
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="additional[]" value="translation">
+                                        <span class="checkmark"></span>
+                                        Translation services
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="additional[]" value="direction">
+                                        <span class="checkmark"></span>
+                                        Live direction session
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- How did you hear about us? -->
+                            <div class="form-group">
+                                <label for="referral">How did you hear about us?</label>
+                                <select id="referral" name="referral">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="search">Search Engine (Google, Bing)</option>
+                                    <option value="social">Social Media</option>
+                                    <option value="referral">Client Referral</option>
+                                    <option value="podcast">Podcast</option>
+                                    <option value="event">Industry Event</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Newsletter -->
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter" value="yes">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for voice over tips and studio updates
+                                </label>
+                            </div>
+                            
+                            <!-- Privacy Consent -->
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="consent" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a> *
+                                </label>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary btn-large">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                                <p class="form-note">We'll respond within 4 hours during business hours</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <div class="map-header" data-aos="fade-up">
+                    <span class="section-tag">Location</span>
+                    <h2>Visit Our Studio</h2>
+                    <p>Located in the heart of Studio City, Los Angeles</p>
+                </div>
+            </div>
+            <div class="map-container" data-aos="fade-up" data-aos-delay="100">
+                <!-- Google Map Placeholder -->
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.835427058659!2d-118.376937684782!3d34.083495680602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2be3d1c3b9b9b%3A0x8e8e8e8e8e8e8e8e!2sStudio%20City%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Studio Tour Section -->
+        <section class="studio-tour-section">
+            <div class="container">
+                <div class="tour-grid">
+                    <div class="tour-content" data-aos="fade-right">
+                        <span class="section-tag">Studio Tour</span>
+                        <h2>Experience Our Recording Space</h2>
+                        <p>Schedule a tour of our professional voice over studio. See our Neumann microphones, Universal Audio preamps, and acoustically treated recording booth firsthand.</p>
+                        
+                        <div class="tour-features">
+                            <div class="tour-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Professional-grade equipment</span>
+                            </div>
+                            <div class="tour-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Acoustically optimized booth</span>
+                            </div>
+                            <div class="tour-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>ISO-certified recording environment</span>
+                            </div>
+                            <div class="tour-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Source-Connect enabled</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="btn btn-outline">
+                            Schedule a Tour <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="tour-image" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&auto=format&fit=crop" alt="VoiceMaster Pro Studio Tour">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">FAQ</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Quick answers to common questions</p>
+                </div>
+                
+                <div class="faq-grid" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How quickly do you respond to inquiries?</h3>
+                            <button class="faq-toggle"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We respond to all inquiries within 4 hours during business hours. Most quotes are provided within 24 hours.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you require a deposit?</h3>
+                            <button class="faq-toggle"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we require a 50% deposit to book studio time and begin work. The remaining balance is due upon delivery of final files.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What payment methods do you accept?</h3>
+                            <button class="faq-toggle"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept all major credit cards (Visa, Mastercard, American Express), PayPal, bank transfers, and checks for corporate accounts.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I direct the session remotely?</h3>
+                            <button class="faq-toggle"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We offer live remote direction via Source-Connect, Zoom, or phone. This is included with most project packages.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What if I need to cancel or reschedule?</h3>
+                            <button class="faq-toggle"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Cancellations made 48+ hours before scheduled recording receive a full refund. Within 48 hours, deposit is non-refundable but can be applied to a future session.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer rush service?</h3>
+                            <button class="faq-toggle"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer 12-hour rush delivery for urgent projects. Additional rush fees apply. Contact us for availability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content" data-aos="zoom-in">
+                    <h2>Ready to Start Your Project?</h2>
+                    <p>Get your free quote within 24 hours. No obligation, just professional advice.</p>
+                    <div class="cta-buttons">
+                        <a href="#contactForm" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i> Send Your Inquiry
+                        </a>
+                        <a href="tel:+18881234567" class="btn btn-outline-light btn-large">
+                            <i class="fas fa-phone-alt"></i> Call Us Now
+                        </a>
+                    </div>
+                    <div class="cta-contact">
+                        <span><i class="fas fa-phone"></i> +1 (888) 123-4567</span>
+                        <span><i class="fas fa-envelope"></i> studio@voicemasterpro.com</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <span style="font-size: 28px; font-weight: 900; color: var(--primary-color); font-family: 'Playfair Display', serif;">VoiceMaster<span style="color: var(--accent-color);">Pro</span></span>
+                    <p>Professional voice over services that connect. Award-winning studio with 15+ years of experience in commercial, narration, corporate, and character voice overs.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="demos.html">Demos</a></li>
+                        <li><a href="studio.html">Studio</a></li>
+                        <li><a href="process.html">Process</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="narration.html">Narration</a></li>
+                        <li><a href="corporate.html">Corporate</a></li>
+                        <li><a href="character.html">Character</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>123 Recording Ave, Studio City, CA 91604</span></li>
+                        <li><i class="fas fa-phone"></i><span>+1 (888) 123-4567</span></li>
+                        <li><i class="fas fa-envelope"></i><span>studio@voicemasterpro.com</span></li>
+                        <li><i class="fas fa-clock"></i><span>Mon-Fri: 9am - 6pm PST</span></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 VoiceMaster Pro. All rights reserved. Award-winning voice over studio.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/form-validation.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Theme toggle functionality
+        (function() {
+            function setTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+            }
+
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                setTheme(newTheme);
+            }
+
+            // Apply saved theme on load
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+
+            // Attach event listeners to theme toggle buttons
+            window.addEventListener('load', function() {
+                const themeBtn = document.getElementById('themeToggle');
+                const mobileThemeBtn = document.getElementById('mobileThemeToggle');
+                
+                if (themeBtn) {
+                    themeBtn.addEventListener('click', toggleTheme);
+                }
+                if (mobileThemeBtn) {
+                    mobileThemeBtn.addEventListener('click', toggleTheme);
+                }
+            });
+        })();
+        
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                const faqItem = this.closest('.faq-item');
+                faqItem.classList.toggle('active');
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-plus');
+                icon.classList.toggle('fa-minus');
+            });
+        });
+        
+        // File Upload Display
+        const fileInput = document.getElementById('scriptUpload');
+        if (fileInput) {
+            fileInput.addEventListener('change', function() {
+                const label = this.closest('.file-upload').querySelector('.file-upload-label span:first-of-type');
+                if (this.files.length > 0) {
+                    label.textContent = this.files[0].name;
+                } else {
+                    label.textContent = 'Drag & drop or click to upload';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
