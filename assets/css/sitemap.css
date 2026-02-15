@@ -1,0 +1,833 @@
+/* ==========================================================================
+   VoiceMaster Pro - Sitemap Page Stylesheet
+   Version: 2.0.0
+   Author: VoiceMaster Pro
+   Description: Complete sitemap page styling with vibrant purple + multicolor scheme
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   TABLE OF CONTENTS:
+   
+   1. PAGE HEADER - SITEMAP HERO
+   2. SITEMAP SECTION
+   3. SITEMAP GRID - EQUAL SIZE CARDS
+   4. CATEGORY CARDS - UNIFORM HEIGHT
+   5. SITEMAP LINKS
+   6. SUBPAGES & CONTACT ITEMS
+   7. XML SITEMAP NOTE
+   8. QUICK LINKS GRID
+   9. CTA SECTION
+   10. RESPONSIVE DESIGN
+   11. ANIMATIONS
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   1. PAGE HEADER - SITEMAP HERO
+   -------------------------------------------------------------------------- */
+
+.page-header-sitemap {
+    background: linear-gradient(135deg, #2e1065, #4c1d95, #6d28d9, #7e22ce);
+    position: relative;
+    overflow: hidden;
+    padding: var(--spacing-16) 0;
+    isolation: isolate;
+    text-align: center;
+}
+
+.page-header-sitemap::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+    animation: rotateHeader 40s linear infinite;
+    z-index: 1;
+}
+
+.page-header-sitemap::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #f59e0b, #ef4444, #db2777, #9333ea, #3b82f6, #10b981);
+    background-size: 300% 100%;
+    animation: gradientShift 6s ease infinite;
+}
+
+.page-header-sitemap .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header-sitemap .page-tag {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-5);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: var(--text-xs);
+    margin-bottom: var(--spacing-4);
+}
+
+.page-header-sitemap .page-tag i {
+    color: var(--color-amber-300);
+    filter: drop-shadow(0 0 5px rgba(245,158,11,0.5));
+}
+
+.page-header-sitemap h1 {
+    color: white;
+    font-size: var(--text-5xl);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-4);
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-header-sitemap .page-description {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: var(--text-lg);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    margin-bottom: var(--spacing-6);
+}
+
+.page-header-sitemap .breadcrumbs {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: var(--text-sm);
+}
+
+.page-header-sitemap .breadcrumbs a {
+    color: rgba(255, 255, 255, 0.9);
+    transition: all var(--transition-fast) var(--timing-smooth);
+    text-decoration: none;
+}
+
+.page-header-sitemap .breadcrumbs a:hover {
+    color: white;
+    text-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
+
+.page-header-sitemap .breadcrumbs i {
+    color: var(--color-amber-300);
+    margin: 0 var(--spacing-2);
+    font-size: var(--text-xs);
+}
+
+/* --------------------------------------------------------------------------
+   2. SITEMAP SECTION
+   -------------------------------------------------------------------------- */
+
+.sitemap-section {
+    padding: var(--spacing-20) 0;
+    background: linear-gradient(135deg, var(--color-white), var(--color-gray-50));
+    position: relative;
+}
+
+[data-theme="dark"] .sitemap-section {
+    background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+}
+
+.sitemap-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   3. SITEMAP GRID - EQUAL SIZE CARDS
+   -------------------------------------------------------------------------- */
+
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+@media (max-width: 1200px) {
+    .sitemap-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sitemap-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sitemap-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   4. CATEGORY CARDS - UNIFORM HEIGHT
+   -------------------------------------------------------------------------- */
+
+.sitemap-category {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sitemap-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-purple);
+    border-color: var(--color-purple-300);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-purple-600);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.category-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(135deg, #9333ea, #c026d3, #db2777, #ef4444, #f59e0b, #10b981, #3b82f6, #6366f1);
+    border-radius: 9999px;
+}
+
+.category-header i {
+    font-size: 24px;
+    background: linear-gradient(135deg, #9333ea, #c026d3, #db2777);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.category-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* --------------------------------------------------------------------------
+   5. SITEMAP LINKS - FLEXIBLE HEIGHT
+   -------------------------------------------------------------------------- */
+
+.sitemap-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sitemap-links li {
+    margin-bottom: 8px;
+}
+
+.sitemap-links li:last-child {
+    margin-bottom: 0;
+}
+
+.sitemap-links a {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--bg-secondary), transparent);
+}
+
+.sitemap-links a:hover {
+    background: linear-gradient(135deg, var(--color-purple-100), var(--color-fuchsia-100));
+    transform: translateX(5px);
+}
+
+[data-theme="dark"] .sitemap-links a:hover {
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(192, 38, 211, 0.2));
+}
+
+.page-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-purple-600);
+    font-size: 12px;
+}
+
+.sitemap-links a:hover .page-icon {
+    color: var(--color-purple-800);
+    transform: scale(1.1);
+}
+
+[data-theme="dark"] .sitemap-links a:hover .page-icon {
+    color: var(--color-purple-400);
+}
+
+.page-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 110px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.page-desc {
+    color: var(--text-tertiary);
+    font-size: 12px;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.sitemap-links a:hover .page-name {
+    color: var(--color-purple-700);
+}
+
+.sitemap-links a:hover .page-desc {
+    color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   6. SUBPAGES & CONTACT ITEMS - HIERARCHY PRESERVED
+   -------------------------------------------------------------------------- */
+
+.sitemap-subheading {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-purple-600);
+    margin: 16px 0 8px;
+    padding-left: 10px;
+}
+
+li.subpage {
+    margin-left: 30px;
+}
+
+li.subpage a {
+    padding: 6px 10px;
+    background: transparent;
+}
+
+li.subpage .page-name {
+    min-width: 90px;
+    font-size: 13px;
+}
+
+/* Nested subpages for deeper hierarchy */
+li.subpage .subpage {
+    margin-left: 20px;
+}
+
+li.subpage .subpage .page-name {
+    min-width: 80px;
+    font-size: 12px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--bg-secondary), transparent);
+    margin-bottom: 6px;
+}
+
+.contact-info-item .page-icon {
+    color: var(--color-purple-600);
+    margin-top: 2px;
+}
+
+.contact-detail {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.contact-detail strong {
+    color: var(--color-purple-600);
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   7. XML SITEMAP NOTE
+   -------------------------------------------------------------------------- */
+
+.sitemap-note {
+    margin: 48px 0;
+}
+
+.note-content {
+    background: linear-gradient(135deg, var(--color-purple-100), var(--color-fuchsia-100));
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: 1px solid var(--color-purple-300);
+    box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .note-content {
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(192, 38, 211, 0.2));
+    border-color: rgba(147, 51, 234, 0.3);
+}
+
+.note-content i {
+    font-size: 48px;
+    color: var(--color-purple-600);
+    filter: drop-shadow(0 4px 8px rgba(147, 51, 234, 0.3));
+}
+
+.note-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.note-content p {
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.note-content a {
+    color: var(--color-purple-600);
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.note-content a:hover {
+    color: var(--color-purple-800);
+    text-decoration: none;
+}
+
+[data-theme="dark"] .note-content a:hover {
+    color: var(--color-purple-400);
+}
+
+.note-small {
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+/* --------------------------------------------------------------------------
+   8. QUICK LINKS GRID
+   -------------------------------------------------------------------------- */
+
+.quick-links-grid {
+    margin-top: 48px;
+}
+
+.quick-links-grid h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 32px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quick-links-grid h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, #9333ea, #c026d3, #db2777, #ef4444, #f59e0b, #10b981, #3b82f6, #6366f1);
+    border-radius: 9999px;
+}
+
+.quick-links-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 1024px) {
+    .quick-links-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .quick-links-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quick-links-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+.quick-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-align: center;
+    height: 100px;
+}
+
+.quick-link:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #9333ea, #c026d3, #db2777);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(147, 51, 234, 0.3), 0 4px 6px -4px rgba(147, 51, 234, 0.2);
+}
+
+.quick-link i {
+    font-size: 20px;
+    color: var(--color-purple-600);
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.quick-link:hover i {
+    color: white;
+    transform: scale(1.2);
+}
+
+.quick-link span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   9. CTA SECTION
+   -------------------------------------------------------------------------- */
+
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #9333ea, #c026d3, #db2777, #ef4444, #f59e0b, #10b981, #3b82f6, #6366f1);
+    position: relative;
+    overflow: hidden;
+    animation: gradientShift 6s ease infinite;
+    background-size: 300% 300%;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    animation: rotate 25s linear infinite;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+}
+
+.cta-content h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: white;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.2);
+}
+
+.cta-content p {
+    font-size: 20px;
+    margin-bottom: 32px;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.1);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn-primary {
+    background: white;
+    color: #7e22ce;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cta-buttons .btn-primary:hover {
+    background: rgba(255,255,255,0.9);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px -8px rgba(0,0,0,0.3);
+}
+
+.cta-buttons .btn-outline-light {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cta-buttons .btn-outline-light:hover {
+    background: white;
+    color: #7e22ce;
+    transform: translateY(-4px);
+}
+
+/* --------------------------------------------------------------------------
+   10. RESPONSIVE DESIGN - MAINTAINS CARD SIZING
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+    .sitemap-section {
+        padding: 64px 0;
+    }
+    
+    .page-header-sitemap h1 {
+        font-size: 42px;
+    }
+    
+    .page-name {
+        min-width: 100px;
+    }
+    
+    .sitemap-category {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header-sitemap {
+        padding: 48px 0;
+    }
+    
+    .page-header-sitemap h1 {
+        font-size: 32px;
+    }
+    
+    .page-header-sitemap .page-description {
+        font-size: 16px;
+    }
+    
+    .sitemap-section {
+        padding: 48px 0;
+    }
+    
+    .sitemap-category {
+        padding: 16px;
+        min-height: 350px;
+    }
+    
+    .category-header h2 {
+        font-size: 16px;
+    }
+    
+    .sitemap-links a {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .page-name {
+        min-width: auto;
+        width: calc(100% - 30px);
+        margin-left: 30px;
+    }
+    
+    .page-desc {
+        width: calc(100% - 30px);
+        margin-left: 30px;
+    }
+    
+    .note-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+        gap: 16px;
+    }
+    
+    .cta-section {
+        padding: 60px 0;
+    }
+    
+    .cta-content h2 {
+        font-size: 28px;
+    }
+    
+    .cta-content p {
+        font-size: 18px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .cta-buttons .btn-primary,
+    .cta-buttons .btn-outline-light {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header-sitemap h1 {
+        font-size: 28px;
+    }
+    
+    .page-header-sitemap .page-tag {
+        font-size: 11px;
+        padding: 4px 12px;
+    }
+    
+    .page-header-sitemap .breadcrumbs {
+        font-size: 12px;
+    }
+    
+    .category-header i {
+        font-size: 20px;
+    }
+    
+    .category-header h2 {
+        font-size: 15px;
+    }
+    
+    .sitemap-category {
+        min-height: 320px;
+        padding: 14px;
+    }
+    
+    .contact-info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    .contact-info-item .page-icon {
+        margin-bottom: 4px;
+    }
+    
+    .note-content i {
+        font-size: 40px;
+    }
+    
+    .note-content h3 {
+        font-size: 20px;
+    }
+    
+    .quick-links-grid h3 {
+        font-size: 20px;
+    }
+    
+    .quick-link {
+        height: 90px;
+        padding: 12px 8px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   11. ANIMATIONS
+   -------------------------------------------------------------------------- */
+
+@keyframes rotateHeader {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(1.05); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ==========================================================================
+   END OF SITEMAP.CSS - ALL SECTIONS SAME SIZE
+   ========================================================================== */
