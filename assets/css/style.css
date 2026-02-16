@@ -935,12 +935,14 @@ p {
     display: none;
 }
 
-@media (min-width: 1024px) {
-    .desktop-only {
-        display: flex;
-        align-items: center;
+/* ===== FORCE HIDE DESKTOP CTA ON MOBILE ===== */
+@media (max-width: 1023px) {
+    .desktop-only,
+    .nav-cta {
+        display: none !important;
     }
 }
+
 
 .btn-small {
     padding: var(--spacing-2) var(--spacing-5);
@@ -4382,6 +4384,8 @@ p {
 [data-theme="dark"]::-webkit-scrollbar-thumb:hover {
     background: var(--color-purple-500);
 }
+
+
 
 /* --------------------------------------------------------------------------
    END OF DARK & LIGHT MODE CSS
