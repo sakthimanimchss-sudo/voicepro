@@ -85,15 +85,39 @@
           </div>
                 
                 <!-- Desktop Navigation with Dropdowns -->
-                <nav class="nav-desktop" aria-label="Desktop navigation">
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link">
-                                <i class="fas fa-home"></i>
-                                <span class="nav-text">Home</span>
-                                <span class="nav-highlight"></span>
-                            </a>
-                        </li>
+
+               <nav class="nav-desktop" aria-label="Desktop navigation">
+                <ul class="nav-menu">
+
+                <!-- Home Dropdown -->
+                     <li class="nav-item dropdown">
+                          <a href="#" class="nav-link" role="button">
+                          <i class="fas fa-home"></i>
+                          <span class="nav-text">Home</span>
+                          <i class="fas fa-chevron-down dropdown-arrow"></i>
+                          <span class="nav-highlight"></span>
+                     </a>
+
+            <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Home 1</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="home2.html">
+                        <i class="fas fa-home"></i>
+                        <span>Home 2</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        
+
                         
                         <!-- Services Dropdown -->
                         <li class="nav-item dropdown active">
@@ -1350,5 +1374,6 @@
 </body>
 
 </html>
+
 
 
