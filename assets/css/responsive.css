@@ -217,10 +217,25 @@
    5. Laptop (1024px)
    -------------------------------------------------------------------------- */
 
+/* --------------------------------------------------------------------------
+   5. Laptop (1024px)
+   -------------------------------------------------------------------------- */
+
 @media screen and (max-width: 1024px) {
+
+    /* ✅ HIDE DESKTOP CTA BUTTON */
+    .nav-cta {
+        display: none !important;
+    }
+
     .container {
         max-width: 960px;
     }
+
+    h1 {
+        font-size: var(--text-4xl);
+    }
+
 
     h1 {
         font-size: var(--text-4xl);
@@ -447,6 +462,11 @@
         padding: 0 var(--spacing-4);
     }
 
+    /* Hide desktop CTA button on mobile - it's inside hamburger */
+    .nav-cta.desktop-only {
+        display: none !important;
+    }
+
     /* Fixed Title Layout - Hero section */
     .hero {
         padding: var(--spacing-6) 0;
@@ -479,7 +499,7 @@
         margin-bottom: var(--spacing-4);
     }
 
-    /* Button Layout - Stacked properly */
+    /* Button Layout - Stacked properly inside hero, not outside */
     .hero-buttons {
         display: flex;
         flex-direction: column;
@@ -1788,3 +1808,4 @@
         right: max(var(--spacing-8), env(safe-area-inset-right));
     }
 }
+
