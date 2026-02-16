@@ -778,4 +778,41 @@
         BREAKPOINTS
     };
 
+
+})();
+
+// RTL Toggle functionality for both desktop and mobile
+(function() {
+    const rtlBtn = document.getElementById('rtlToggle');
+    const mobileRtlBtn = document.getElementById('mobileRtlToggle');
+    
+    function setRTL(isRTL) {
+        if (isRTL) {
+            document.documentElement.setAttribute('dir', 'rtl');
+            localStorage.setItem('rtl', 'true');
+        } else {
+            document.documentElement.removeAttribute('dir');
+            localStorage.setItem('rtl', 'false');
+        }
+    }
+    
+    // Check saved RTL preference
+    const savedRTL = localStorage.getItem('rtl') === 'true';
+    setRTL(savedRTL);
+    
+    // Add click event to desktop RTL button
+    if (rtlBtn) {
+        rtlBtn.addEventListener('click', function() {
+            const currentRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            setRTL(!currentRTL);
+        });
+    }
+    
+    // Add click event to mobile RTL button
+    if (mobileRtlBtn) {
+        mobileRtlBtn.addEventListener('click', function() {
+            const currentRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            setRTL(!currentRTL);
+        });
+    }
 })();
