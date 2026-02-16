@@ -4385,11 +4385,33 @@ p {
     background: var(--color-purple-500);
 }
 
+/* RTL Button - Proper Navbar Size */
+.rtl-btn-small {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;   /* reduce icon size */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-left: 0.5rem;
+    padding: 0;
+    flex-shrink: 0;   /* prevents layout breaking */
+}
 
+.rtl-btn-small i {
+    font-size: 18px;   /* keep proportional */
+    line-height: 1;
+}
 
-/* --------------------------------------------------------------------------
-   END OF DARK & LIGHT MODE CSS
-   -------------------------------------------------------------------------- */
-/* ==========================================================================
-   END OF LOGO SECTION - VOICEMASTER PRO
-   ========================================================================== */
+.rtl-btn-small:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
