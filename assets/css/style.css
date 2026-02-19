@@ -1032,18 +1032,21 @@ body.dark-mode .nav-link.active {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 100%;
-    max-width: 400px;
-    height: 100vh;
+    width: 400px;                     /* Fixed width instead */
+    max-width: 100%;                  /* Prevent overflow */
+    height: 100dvh;                   /* Better for mobile */
     background-color: var(--color-white);
     box-shadow: var(--shadow-2xl);
     overflow-y: auto;
+    overflow-x: hidden;               /* Prevent horizontal scroll */
     transition: right var(--transition-base) var(--timing-bounce);
     display: flex;
     flex-direction: column;
     border-left: 3px solid transparent;
     border-image: var(--gradient-purple-pink) 1;
+    box-sizing: border-box;
 }
+
 
 .nav-mobile-overlay.active .nav-mobile-content {
     right: 0;
@@ -1265,16 +1268,20 @@ body.dark-mode .nav-link.active {
     top: 0;
     left: 100%;
     min-width: 220px;
+    max-width: 90vw;              /* Prevent overflow */
     background-color: var(--color-white);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-purple);
     padding: var(--spacing-2);
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-10px);
-    transition: all var(--transition-base) var(--timing-bounce);
+    transform: translateX(0);     /* Remove negative push */
+    transition: opacity var(--transition-base),
+                transform var(--transition-base);
     border: 1px solid var(--color-purple-200);
+    box-sizing: border-box;       /* Prevent width overflow */
 }
+
 
 .dropdown-item:hover .dropdown-submenu {
     opacity: 1;
@@ -1290,6 +1297,21 @@ body.dark-mode .nav-link.active {
     border: none;
     border-top: 1px solid var(--color-purple-200);
     margin: 0 var(--spacing-2);
+}
+
+@media (max-width: 768px) {
+    .dropdown-submenu {
+        position: static;
+        left: auto;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        border: none;
+        padding-left: var(--spacing-4);
+        min-width: 100%;
+        max-width: 100%;
+    }
 }
 
 /* --------------------------------------------------------------------------
