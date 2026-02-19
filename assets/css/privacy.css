@@ -1,6 +1,6 @@
 /* ==========================================================================
    VoiceMaster Pro - Privacy Policy Page Stylesheet
-   Version: 2.0.0
+   Version: 2.0.1
    Author: VoiceMaster Pro
    Description: Complete privacy policy page styling with vibrant purple + multicolor scheme
    ========================================================================== */
@@ -169,7 +169,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   3. TABLE OF CONTENTS
+   3. TABLE OF CONTENTS - FIXED MOBILE SCROLLING
    -------------------------------------------------------------------------- */
 
 .legal-toc {
@@ -184,6 +184,9 @@
     overflow-y: auto;
     box-shadow: var(--shadow-lg);
     transition: all var(--transition-base) var(--timing-smooth);
+    /* Mobile scrolling fixes */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
 }
 
 .legal-toc:hover {
@@ -199,6 +202,9 @@
     padding-bottom: var(--spacing-3);
     border-bottom: 2px solid var(--color-purple-600);
     position: relative;
+    /* Ensure header stays visible */
+    background: var(--bg-card);
+    z-index: 2;
 }
 
 .legal-toc h3::after {
@@ -239,6 +245,10 @@
     border-radius: var(--radius-lg);
     font-size: var(--text-sm);
     font-weight: 500;
+    /* Improve touch target on mobile */
+    min-height: 44px;
+    display: flex;
+    align-items: center;
 }
 
 .legal-toc a:hover {
@@ -269,6 +279,8 @@
     padding: var(--spacing-12);
     box-shadow: var(--shadow-lg);
     transition: all var(--transition-base) var(--timing-smooth);
+    /* Ensure proper scrolling for anchor links */
+    scroll-margin-top: 120px;
 }
 
 .legal-body:hover {
@@ -286,6 +298,9 @@
     overflow: hidden;
     margin: var(--spacing-6) 0;
     box-shadow: var(--shadow-sm);
+    /* Mobile scrolling for wide tables */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .cookie-row {
@@ -296,6 +311,8 @@
     border-bottom: 1px solid var(--border-color);
     background: var(--bg-card);
     transition: all var(--transition-fast) var(--timing-smooth);
+    /* Ensure minimum width for content */
+    min-width: 600px;
 }
 
 .cookie-row:last-child {
@@ -919,7 +936,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   13. RESPONSIVE DESIGN
+   13. RESPONSIVE DESIGN - FIXED MOBILE SCROLLING
    -------------------------------------------------------------------------- */
 
 @media (max-width: 1200px) {
@@ -943,6 +960,7 @@
         padding: var(--spacing-16) 0;
     }
     
+    /* Improved TOC for tablet */
     .legal-toc ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -987,32 +1005,104 @@
         font-size: var(--text-base);
     }
     
-    .legal-toc ul {
-        grid-template-columns: 1fr;
-    }
-    
+    /* Fixed TOC for mobile - no longer sticky */
     .legal-toc {
         position: relative;
         top: 0;
         max-height: none;
+        margin-bottom: var(--spacing-4);
+        /* Remove sticky positioning on mobile */
+        position: relative;
+        top: auto;
+        max-height: 300px;
+        overflow-y: auto;
+        /* Ensure smooth scrolling on iOS */
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Make TOC collapsible on mobile for better UX */
+    .legal-toc.collapsible {
+        cursor: pointer;
+    }
+    
+    .legal-toc.collapsible h3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    
+    .legal-toc.collapsible h3::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        font-size: var(--text-sm);
+        transition: transform var(--transition-fast) var(--timing-smooth);
+    }
+    
+    .legal-toc.collapsible.collapsed h3::after {
+        transform: rotate(-90deg);
+    }
+    
+    .legal-toc.collapsible.collapsed ul {
+        display: none;
+    }
+    
+    .legal-toc ul {
+        grid-template-columns: 1fr;
+        /* Add padding for better scrolling */
+        padding-bottom: var(--spacing-2);
+    }
+    
+    .legal-toc a {
+        min-height: 44px;
+        padding: var(--spacing-3) var(--spacing-4);
+        font-size: var(--text-base);
+    }
+    
+    /* Improved cookie table for mobile */
+    .cookies-table {
+        border: none;
+        background: transparent;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .cookie-row {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-2);
+        min-width: 100%;
+        display: block;
         padding: var(--spacing-3);
+        margin-bottom: var(--spacing-3);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        background: var(--bg-card);
     }
     
     .cookie-row.header {
         display: none;
     }
     
+    .cookie-row > * {
+        display: flex;
+        padding: var(--spacing-2) 0;
+        border-bottom: 1px dashed var(--border-color-light);
+    }
+    
+    .cookie-row > *:last-child {
+        border-bottom: none;
+    }
+    
     .cookie-row::before {
         content: attr(data-label);
         font-weight: 700;
         color: var(--color-purple-600);
-        display: block;
-        margin-bottom: var(--spacing-1);
+        min-width: 100px;
+        flex-shrink: 0;
+    }
+    
+    .cookie-row span {
+        flex: 1;
+        text-align: right;
     }
     
     .commitment-content h2 {
@@ -1093,6 +1183,20 @@
     .compliance-badge {
         flex-direction: column;
         text-align: center;
+    }
+    
+    /* Additional mobile optimizations */
+    .legal-section {
+        scroll-margin-top: 80px;
+    }
+    
+    .faq-item {
+        padding: var(--spacing-4);
+    }
+    
+    .faq-question h3 {
+        font-size: var(--text-sm);
+        padding-right: var(--spacing-2);
     }
 }
 
