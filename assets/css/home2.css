@@ -11,10 +11,10 @@
    
    1. HERO SECTION - PURPLE SPECTRUM (UPDATED)
    2. FEATURED WORK SECTION
-   3. VOICE ARTISTS SECTION
+   3. VOICE ARTISTS SECTION (UPDATED - Images centered)
    4. INDUSTRIES SECTION
    5. WHY CHOOSE US SECTION
-   6. PRICING OVERVIEW SECTION
+   6. PRICING OVERVIEW SECTION (REDESIGNED - matches image reference)
    7. TECHNOLOGY PARTNERS SECTION
    8. TESTIMONIALS SECTION (UPDATED)
    9. FAQ SECTION
@@ -580,7 +580,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   3. VOICE ARTISTS SECTION
+   3. VOICE ARTISTS SECTION (UPDATED - Images centered)
    -------------------------------------------------------------------------- */
 
 .artists-section {
@@ -653,6 +653,9 @@
     padding: var(--spacing-8);
     text-align: center;
     transition: all var(--transition-base) var(--timing-bounce);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .artist-card:hover {
@@ -670,6 +673,9 @@
     border: 4px solid white;
     margin-bottom: var(--spacing-4);
     transition: all var(--transition-base) var(--timing-bounce);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 [data-theme="dark"] .artist-card img {
@@ -687,18 +693,23 @@
     font-size: var(--text-xl);
     font-weight: 700;
     margin-bottom: var(--spacing-2);
+    text-align: center;
+    width: 100%;
 }
 
 .artist-card p {
     color: rgba(255, 255, 255, 0.9);
     font-size: var(--text-sm);
     margin-bottom: var(--spacing-4);
+    text-align: center;
+    width: 100%;
 }
 
 .artist-social {
     display: flex;
     justify-content: center;
     gap: var(--spacing-3);
+    width: 100%;
 }
 
 .artist-social a {
@@ -951,7 +962,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   6. PRICING OVERVIEW SECTION
+   6. PRICING OVERVIEW SECTION (REDESIGNED - matches image reference)
    -------------------------------------------------------------------------- */
 
 .pricing-overview {
@@ -992,40 +1003,29 @@
     transition: all var(--transition-base) var(--timing-bounce);
     position: relative;
     overflow: hidden;
-}
-
-.pricing-card.popular {
-    transform: scale(1.05);
-    border: 2px solid var(--color-purple-600);
-    box-shadow: var(--shadow-purple);
-    z-index: 2;
-}
-
-@media (max-width: 1024px) {
-    .pricing-card.popular {
-        transform: scale(1);
-    }
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .pricing-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-rainbow);
+    border-color: transparent;
 }
 
-.pricing-card.popular:hover {
-    transform: scale(1.05) translateY(-10px);
+.pricing-card.popular {
+    border: 2px solid var(--color-purple-600);
+    box-shadow: var(--shadow-purple);
+    z-index: 2;
+    background: linear-gradient(135deg, var(--bg-card), rgba(147, 51, 234, 0.05));
 }
 
-@media (max-width: 1024px) {
-    .pricing-card.popular:hover {
-        transform: translateY(-10px);
-    }
-}
-
-.popular-badge {
+.pricing-card.popular::before {
+    content: 'MOST POPULAR';
     position: absolute;
-    top: var(--spacing-4);
-    right: var(--spacing-4);
+    top: 12px;
+    right: 12px;
     background: var(--gradient-purple-pink);
     color: white;
     font-size: var(--text-xs);
@@ -1034,23 +1034,40 @@
     border-radius: var(--radius-full);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    z-index: 2;
 }
 
 .pricing-card h3 {
     font-size: var(--text-2xl);
-    font-weight: 800;
+    font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-4);
+    margin-bottom: var(--spacing-3);
+    position: relative;
+    z-index: 2;
+}
+
+.pricing-card.popular h3 {
+    color: var(--color-purple-600);
+}
+
+[data-theme="dark"] .pricing-card.popular h3 {
+    color: var(--color-purple-400);
 }
 
 .price {
     font-size: var(--text-4xl);
     font-weight: 800;
-    color: var(--color-purple-600);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-4);
+    position: relative;
+    z-index: 2;
 }
 
-[data-theme="dark"] .price {
+.pricing-card.popular .price {
+    color: var(--color-purple-600);
+}
+
+[data-theme="dark"] .pricing-card.popular .price {
     color: var(--color-purple-400);
 }
 
@@ -1065,6 +1082,9 @@
     list-style: none;
     padding: 0;
     margin: 0 0 var(--spacing-6);
+    flex: 1;
+    position: relative;
+    z-index: 2;
 }
 
 .pricing-card ul li {
@@ -1079,16 +1099,32 @@
 .pricing-card ul li i {
     color: var(--color-emerald-500);
     font-size: var(--text-sm);
+    width: 18px;
 }
 
 .pricing-card .btn {
     width: 100%;
     justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
 }
 
 .pricing-card .btn-outline {
     border: 2px solid var(--color-purple-600);
     color: var(--color-purple-600);
+    background: transparent;
+}
+
+.pricing-card.popular .btn {
+    background: var(--gradient-purple-pink);
+    color: white;
+    border: none;
+}
+
+.pricing-card.popular .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-rainbow);
 }
 
 .pricing-card .btn-outline:hover {
@@ -1427,7 +1463,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   10. CTA SECTION (UPDATED)
+   10. CTA SECTION - COMPLETE FIX
    -------------------------------------------------------------------------- */
 
 .cta-section {
