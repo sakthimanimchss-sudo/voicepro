@@ -1013,6 +1013,7 @@ body.dark-mode .nav-link.active {
 .hamburger-menu.active .line3 {
     transform: rotate(-45deg);
 }
+
 .nav-mobile-overlay {
     position: fixed;
     top: 0;
@@ -1780,57 +1781,7 @@ textarea::placeholder {
     color: white;
 }
 
-/* ===== TESTIMONIAL CARDS ===== */
-.testimonial-card {
-    background-color: var(--color-white);
-    border-radius: var(--radius-2xl);
-    padding: var(--spacing-8);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--color-gray-200);
-    transition: all var(--transition-base) var(--timing-bounce);
-    position: relative;
-}
 
-.testimonial-card::before {
-    content: '"';
-    position: absolute;
-    top: -20px;
-    left: 20px;
-    font-size: 120px;
-    font-weight: 900;
-    color: var(--color-purple-100);
-    font-family: var(--font-secondary);
-    line-height: 1;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-purple);
-    border-color: var(--color-purple-300);
-}
-
-.testimonial-rating {
-    margin-bottom: var(--spacing-4);
-    color: var(--color-amber-500);
-}
-
-.testimonial-rating i {
-    margin-right: 2px;
-}
-
-.testimonial-author img {
-    width: 60px;
-    height: 60px;
-    border-radius: var(--radius-full);
-    object-fit: cover;
-    border: 3px solid white;
-    box-shadow: var(--shadow-md);
-}
-
-.testimonial-card:hover .testimonial-author img {
-    border-color: var(--color-purple-400);
-    transform: scale(1.05);
-}
 
 
 
@@ -2078,26 +2029,7 @@ textarea::placeholder {
     box-shadow: var(--shadow-purple);
 }
 
-/* --------------------------------------------------------------------------
-   16. PROCESS SECTION
-   -------------------------------------------------------------------------- */
 
-.process-section {
-    background: linear-gradient(135deg, var(--color-purple-900), var(--color-purple-800));
-    position: relative;
-    overflow: hidden;
-}
-
-.process-section .section-tag {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.step:hover .step-icon {
-    background: var(--gradient-rainbow);
-    border-color: white;
-}
 
 /* --------------------------------------------------------------------------
    17. TESTIMONIALS SECTION
@@ -4346,4 +4278,3 @@ p {
     box-shadow: var(--shadow-purple);
 }
 /* ===== NAVBAR FIX ===== */
-
