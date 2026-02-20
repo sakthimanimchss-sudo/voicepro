@@ -1,6 +1,6 @@
 /* ==========================================================================
    VoiceMaster Pro - Responsive Stylesheet
-   Version: 1.0.0
+   Version: 1.0.1
    Author: VoiceMaster Pro
    Description: Responsive breakpoints and mobile-specific overrides
    ========================================================================== */
@@ -21,6 +21,19 @@
    12. Print & Accessibility
    -------------------------------------------------------------------------- */
 
+/* Base mobile scrolling fixes */
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden; /* prevents layout shift but keeps vertical scroll */
+    -webkit-overflow-scrolling: touch;
+}
 /* --------------------------------------------------------------------------
    1. 2K & 4K Screens (2560px+)
    -------------------------------------------------------------------------- */
@@ -217,13 +230,8 @@
    5. Laptop (1024px)
    -------------------------------------------------------------------------- */
 
-/* --------------------------------------------------------------------------
-   5. Laptop (1024px)
-   -------------------------------------------------------------------------- */
-
 @media screen and (max-width: 1024px) {
-
-    /* ✅ HIDE DESKTOP CTA BUTTON */
+    /* Hide desktop CTA button */
     .nav-cta {
         display: none !important;
     }
@@ -231,11 +239,6 @@
     .container {
         max-width: 960px;
     }
-
-    h1 {
-        font-size: var(--text-4xl);
-    }
-
 
     h1 {
         font-size: var(--text-4xl);
@@ -454,26 +457,46 @@
 }
 
 /* --------------------------------------------------------------------------
-   7. Tablet Portrait (768px) - FIXED TITLE LAYOUT
+   7. Tablet Portrait (768px) - FIXED SCROLLING
    -------------------------------------------------------------------------- */
 
 @media screen and (max-width: 768px) {
-    .container {
-        padding: 0 var(--spacing-4);
+
+    body {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
-    /* Hide desktop CTA button on mobile - it's inside hamburger */
+    .container {
+        padding: 0 var(--spacing-4);
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Fix for fixed position elements */
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        background: var(--color-white);
+    }
+
+    /* Hide desktop CTA button on mobile */
     .nav-cta.desktop-only {
         display: none !important;
     }
 
-    /* Fixed Title Layout - Hero section */
+    /* Hero section scrolling fixes */
     .hero {
         padding: var(--spacing-6) 0;
+        min-height: auto;
+        overflow: visible;
     }
 
     .hero-content {
         margin-bottom: var(--spacing-4);
+        width: 100%;
     }
 
     .hero-tag {
@@ -487,19 +510,22 @@
         font-size: var(--text-2xl);
         line-height: 1.2;
         margin-bottom: var(--spacing-2);
+        word-wrap: break-word;
     }
 
     .hero-subtitle {
         font-size: var(--text-lg);
         margin-bottom: var(--spacing-3);
+        word-wrap: break-word;
     }
 
     .hero-description {
         font-size: var(--text-sm);
         margin-bottom: var(--spacing-4);
+        word-wrap: break-word;
     }
 
-    /* Button Layout - Stacked properly inside hero, not outside */
+    /* Button Layout - Stacked properly */
     .hero-buttons {
         display: flex;
         flex-direction: column;
@@ -513,29 +539,35 @@
         margin: 0;
         padding: var(--spacing-3) var(--spacing-4);
         font-size: var(--text-sm);
+        box-sizing: border-box;
     }
 
-    /* Stats layout */
+    /* Stats layout - ensure no overflow */
     .hero-stats {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: var(--spacing-3);
         margin-bottom: var(--spacing-4);
+        width: 100%;
     }
 
     .stat-item {
         flex: 1 1 calc(50% - var(--spacing-3));
         min-width: 120px;
+        max-width: calc(50% - var(--spacing-3));
         padding: var(--spacing-3);
+        box-sizing: border-box;
     }
 
     .stat-number {
         font-size: var(--text-2xl);
+        word-wrap: break-word;
     }
 
     .stat-label {
         font-size: var(--text-xs);
+        word-wrap: break-word;
     }
 
     /* Trust badges */
@@ -544,20 +576,31 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: var(--spacing-2);
+        width: 100%;
     }
 
     .trust-badges span {
         font-size: var(--text-xs);
         padding: var(--spacing-1) var(--spacing-2);
+        white-space: nowrap;
     }
 
-    /* Hero image */
+    /* Hero image - prevent overflow */
     .hero-image {
         margin-top: var(--spacing-4);
+        width: 100%;
+        overflow: hidden;
     }
 
     .hero-image-wrapper {
         max-width: 100%;
+        position: relative;
+    }
+
+    .hero-image-wrapper img {
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
 
     .hero-badge {
@@ -575,38 +618,56 @@
         font-size: var(--text-xs);
     }
 
-    /* Rest of existing 768px styles remain exactly the same */
+    /* Rest of existing 768px styles with scrolling fixes */
     h1 {
         font-size: var(--text-3xl);
+        word-wrap: break-word;
     }
 
     h2 {
         font-size: var(--text-2xl);
+        word-wrap: break-word;
     }
 
     .section {
         padding: var(--spacing-8) 0;
+        overflow: visible;
     }
 
     .section-header {
         margin-bottom: var(--spacing-8);
+        width: 100%;
     }
 
     .section-header h2 {
         font-size: var(--text-2xl);
         margin-bottom: var(--spacing-3);
+        word-wrap: break-word;
     }
 
     .section-header p {
         font-size: var(--text-base);
+        word-wrap: break-word;
+    }
+
+    /* Grid layouts - ensure proper wrapping */
+    .services-grid,
+    .pricing-grid,
+    .testimonials-grid,
+    .process-steps {
+        width: 100%;
+        overflow: visible;
     }
 
     .services-grid {
         gap: var(--spacing-4);
+        grid-template-columns: 1fr;
     }
 
     .service-card {
         padding: var(--spacing-6);
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .service-icon {
@@ -614,10 +675,13 @@
         height: 56px;
         font-size: var(--text-xl);
         margin-bottom: var(--spacing-4);
+        flex-shrink: 0;
     }
 
     .process-step-detailed {
         padding: var(--spacing-6);
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .step-header {
@@ -637,22 +701,34 @@
     .step-image {
         order: -1;
         margin-bottom: var(--spacing-6);
+        max-width: 100%;
+    }
+
+    .step-image img {
+        max-width: 100%;
+        height: auto;
     }
 
     .pricing-card {
         padding: var(--spacing-6);
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .price .amount {
         font-size: var(--text-4xl);
+        word-wrap: break-word;
     }
 
     .testimonial-card {
         padding: var(--spacing-6);
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .testimonial-text {
         font-size: var(--text-base);
+        word-wrap: break-word;
     }
 
     .testimonial-author {
@@ -662,10 +738,15 @@
 
     .testimonial-author img {
         margin-bottom: var(--spacing-3);
+        max-width: 100%;
+        height: auto;
     }
 
+    /* Voice player fixes */
     .voice-player-container {
         padding: var(--spacing-4);
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .voice-player-header {
@@ -680,6 +761,7 @@
 
     .voice-controls {
         flex-direction: column;
+        width: 100%;
     }
 
     .controls-left,
@@ -693,6 +775,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: var(--spacing-3);
+        width: 100%;
     }
 
     .track-meta {
@@ -700,18 +783,22 @@
         justify-content: space-between;
     }
 
+    /* Footer fixes */
     .footer {
         padding-top: var(--spacing-12);
+        overflow: hidden;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-8);
+        width: 100%;
     }
 
     .footer-brand {
         grid-column: span 1;
         text-align: center;
+        width: 100%;
     }
 
     .footer-social {
@@ -734,10 +821,12 @@
         flex-direction: column;
         gap: var(--spacing-4);
         text-align: center;
+        width: 100%;
     }
 
     .footer-bottom-links {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .back-to-top {
@@ -745,6 +834,19 @@
         right: var(--spacing-4);
         width: 44px;
         height: 44px;
+        z-index: 99;
+    }
+
+    /* Mobile menu fixes */
+    .nav-mobile-overlay {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-mobile-content {
+        max-height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
@@ -959,6 +1061,7 @@
 
     .trust-badges span {
         font-size: var(--text-xs);
+        white-space: normal;
     }
 
     .service-card {
@@ -1808,4 +1911,3 @@
         right: max(var(--spacing-8), env(safe-area-inset-right));
     }
 }
-
