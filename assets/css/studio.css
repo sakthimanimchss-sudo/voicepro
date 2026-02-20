@@ -1185,6 +1185,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-8);
     margin-top: var(--spacing-12);
+    align-items: stretch; /* Important */
 }
 
 @media (max-width: 1024px) {
@@ -1199,72 +1200,62 @@
     }
 }
 
+/* CARD */
 .rate-card {
     background: var(--bg-card);
     border-radius: var(--radius-3xl);
     padding: var(--spacing-8);
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
-    transition: all var(--transition-base) var(--timing-bounce);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Allow badge to show */
+    display: flex;
+    flex-direction: column;
 }
 
-.rate-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: var(--gradient-purple-pink);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--transition-base) var(--timing-bounce);
-}
-
+/* Hover Effect */
 .rate-card:hover {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
     box-shadow: var(--shadow-rainbow);
-    border-color: transparent;
 }
 
-.rate-card:hover::before {
-    transform: scaleX(1);
-}
-
+/* POPULAR CARD FIX */
 .rate-card.popular {
     border: 2px solid var(--color-purple-600);
-    transform: scale(1.05);
     box-shadow: var(--shadow-purple);
+    padding-top: 3.5rem; /* Space for badge */
 }
 
+/* Remove scale (IMPORTANT FIX) */
 .rate-card.popular:hover {
-    transform: scale(1.05) translateY(-12px);
+    transform: translateY(-10px);
 }
 
 [data-theme="dark"] .rate-card.popular {
     border-color: var(--color-purple-400);
 }
 
+/* BADGE */
 .popular-badge {
     position: absolute;
-    top: -12px;
+    top: -14px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--gradient-rainbow);
     color: white;
-    padding: var(--spacing-1) var(--spacing-6);
-    border-radius: var(--radius-full);
-    font-size: var(--text-xs);
+    padding: 6px 18px;
+    border-radius: 999px;
+    font-size: 12px;
     font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    box-shadow: var(--shadow-rainbow);
-    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 8px 20px rgba(147, 51, 234, 0.35);
     white-space: nowrap;
+    z-index: 5;
 }
 
+/* HEADER */
 .rate-header {
     text-align: center;
     margin-bottom: var(--spacing-6);
@@ -1277,6 +1268,7 @@
     color: var(--text-primary);
 }
 
+/* PRICE */
 .rate-price {
     margin-bottom: var(--spacing-2);
 }
@@ -1302,15 +1294,16 @@
 .rate-price .period {
     font-size: var(--text-base);
     color: var(--text-tertiary);
-    font-weight: 400;
     display: block;
     margin-top: var(--spacing-1);
 }
 
+/* FEATURES */
 .rate-features {
     list-style: none;
     margin-bottom: var(--spacing-8);
     padding: 0;
+    flex-grow: 1; /* Keeps button aligned */
 }
 
 .rate-features li {
@@ -1329,57 +1322,12 @@
 
 .rate-features li i {
     color: var(--color-emerald-500);
-    font-size: var(--text-base);
 }
 
-.rate-features li.highlight {
-    color: var(--color-purple-700);
-    font-weight: 600;
-}
-
-[data-theme="dark"] .rate-features li.highlight {
-    color: var(--color-purple-400);
-}
-
-.rate-features li.highlight i {
-    color: var(--color-purple-600);
-}
-
+/* BUTTON */
 .rate-card .btn {
     width: 100%;
 }
-
-.rates-note {
-    margin-top: var(--spacing-8);
-    padding: var(--spacing-6);
-    background: linear-gradient(135deg, var(--color-purple-50), var(--color-fuchsia-50));
-    border-radius: var(--radius-2xl);
-    border: 1px solid var(--color-purple-200);
-    text-align: center;
-}
-
-[data-theme="dark"] .rates-note {
-    background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(192, 38, 211, 0.1));
-    border-color: rgba(147, 51, 234, 0.3);
-}
-
-.rates-note p {
-    margin-bottom: 0;
-    color: var(--text-secondary);
-    font-size: var(--text-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-2);
-    flex-wrap: wrap;
-}
-
-.rates-note i {
-    color: var(--color-purple-600);
-    font-size: var(--text-lg);
-    animation: pulse 2s ease-in-out infinite;
-}
-
 /* --------------------------------------------------------------------------
    9. FAQ SECTION
    -------------------------------------------------------------------------- */
@@ -1489,11 +1437,11 @@
    -------------------------------------------------------------------------- */
 
 .cta-section {
-    padding: var(--spacing-24) 0;
+    padding: var(--spacing-20) 0;
     background: var(--gradient-rainbow);
     position: relative;
     overflow: hidden;
-    animation: gradientShift 8s ease infinite;
+    animation: gradientShift 6s ease infinite;
     background-size: 300% 300%;
 }
 
@@ -1504,75 +1452,39 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
-    animation: rotate 30s linear infinite;
-}
-
-.cta-section::after {
-    content: '';
-    position: absolute;
-    bottom: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    animation: rotate 25s linear infinite reverse;
-}
-
-.cta-section .container {
-    position: relative;
-    z-index: 3;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    animation: rotate 25s linear infinite;
 }
 
 .cta-content {
+    position: relative;
+    z-index: 2;
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    color: white;
 }
 
-/* Heading */
 .cta-content h2 {
     font-size: var(--text-4xl);
     font-weight: 800;
     margin-bottom: var(--spacing-4);
     color: white;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    line-height: 1.2;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 768px) {
-    .cta-content h2 {
-        font-size: var(--text-3xl);
-    }
-}
-
-@media (max-width: 480px) {
-    .cta-content h2 {
-        font-size: var(--text-2xl);
-    }
-}
-
-/* Description */
 .cta-content p {
     font-size: var(--text-xl);
     margin-bottom: var(--spacing-8);
     color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    line-height: 1.6;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 768px) {
-    .cta-content p {
-        font-size: var(--text-lg);
-    }
-}
-
-/* Buttons Container */
 .cta-buttons {
     display: flex;
     gap: var(--spacing-4);
     justify-content: center;
-    margin-bottom: var(--spacing-10);
+    margin-bottom: var(--spacing-8);
     flex-wrap: wrap;
 }
 
@@ -1580,108 +1492,67 @@
     .cta-buttons {
         flex-direction: column;
         align-items: center;
-        gap: var(--spacing-3);
     }
 }
 
-/* Primary Button */
 .cta-buttons .btn-primary {
     background: white;
     color: var(--color-purple-700);
     border: none;
-    padding: var(--spacing-4) var(--spacing-10);
+    padding: var(--spacing-4) var(--spacing-8);
     border-radius: var(--radius-full);
     font-weight: 700;
-    font-size: var(--text-base);
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
-    min-width: 200px;
+    transition: all var(--transition-base) var(--timing-bounce);
 }
 
 .cta-buttons .btn-primary:hover {
-    background: rgba(255, 255, 255, 0.95);
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 20px 30px -8px rgba(0, 0, 0, 0.3);
+    background: rgba(255,255,255,0.9);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px -8px rgba(0,0,0,0.3);
 }
 
-/* Outline Button */
 .cta-buttons .btn-outline-light {
     border: 2px solid white;
     color: white;
     background: transparent;
-    padding: var(--spacing-4) var(--spacing-10);
+    padding: var(--spacing-4) var(--spacing-8);
     border-radius: var(--radius-full);
     font-weight: 700;
-    font-size: var(--text-base);
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    backdrop-filter: blur(5px);
-    min-width: 200px;
+    transition: all var(--transition-base) var(--timing-bounce);
 }
 
 .cta-buttons .btn-outline-light:hover {
     background: white;
     color: var(--color-purple-700);
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 20px 30px -8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
 }
 
-/* Contact Information */
 .cta-contact {
     display: flex;
-    gap: var(--spacing-12);
+    gap: var(--spacing-8);
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: var(--spacing-8);
-    padding-top: var(--spacing-6);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 768px) {
     .cta-contact {
         flex-direction: column;
-        gap: var(--spacing-4);
-        align-items: center;
+        gap: var(--spacing-2);
     }
 }
 
-.cta-contact-item {
+.cta-contact span {
     display: flex;
     align-items: center;
-    gap: var(--spacing-3);
+    gap: var(--spacing-2);
     color: white;
+    opacity: 0.95;
+    font-size: var(--text-sm);
+}
+
+.cta-contact i {
     font-size: var(--text-base);
-    padding: var(--spacing-2) var(--spacing-4);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-full);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: all 0.3s ease;
-}
-
-.cta-contact-item:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-.cta-contact-item i {
-    font-size: var(--text-lg);
-    color: white;
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
-}
-
-.cta-contact-item span,
-.cta-contact-item a {
-    color: white;
-    font-size: var(--text-base);
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.cta-contact-item a:hover {
-    text-decoration: underline;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
 }
 
 /* --------------------------------------------------------------------------
@@ -1877,5 +1748,4 @@
 
 /* ==========================================================================
    END OF STUDIO.CSS - VIBRANT PURPLE + MULTICOLOR SCHEME
-
    ========================================================================== */
