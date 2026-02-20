@@ -947,16 +947,21 @@ body.dark-mode .nav-link.active {
    -------------------------------------------------------------------------- */
 
 .hamburger-menu {
-    display: block;
-    width: 48px;
-    height: 48px;
+    display: flex;                    /* Better centering */
+    align-items: center;
+    justify-content: center;
+    width: 44px;                      /* Slightly smaller */
+    height: 44px;
     position: relative;
     z-index: var(--z-drawer);
     background: var(--color-purple-100);
     border-radius: var(--radius-lg);
-    transition: all var(--transition-fast) var(--timing-smooth);
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition-fast) var(--timing-smooth);
 }
 
+/* Hide on desktop */
 @media (min-width: 1024px) {
     .hamburger-menu {
         display: none;
@@ -967,25 +972,28 @@ body.dark-mode .nav-link.active {
     background: var(--gradient-purple-pink);
 }
 
+/* Lines */
 .hamburger-line {
-    display: block;
-    width: 24px;
+    position: absolute;
+    width: 22px;
     height: 2.5px;
     background: var(--color-purple-600);
     border-radius: var(--radius-full);
-    position: absolute;
-    left: 12px;
-    transition: all var(--transition-base) var(--timing-bounce);
+    transition: transform 0.3s ease,
+                opacity 0.2s ease,
+                background 0.3s ease;
 }
+
+/* Perfect vertical centering */
+.line1 { transform: translateY(-6px); }
+.line2 { transform: translateY(0); }
+.line3 { transform: translateY(6px); }
 
 .hamburger-menu:hover .hamburger-line {
     background: white;
 }
 
-.line1 { top: 16px; }
-.line2 { top: 23px; }
-.line3 { top: 30px; }
-
+/* Active State */
 .hamburger-menu.active {
     background: var(--gradient-purple-pink);
 }
@@ -996,19 +1004,15 @@ body.dark-mode .nav-link.active {
 
 .hamburger-menu.active .line1 {
     transform: rotate(45deg);
-    top: 23px;
 }
 
 .hamburger-menu.active .line2 {
     opacity: 0;
-    transform: translateX(-15px);
 }
 
 .hamburger-menu.active .line3 {
     transform: rotate(-45deg);
-    top: 23px;
 }
-
 .nav-mobile-overlay {
     position: fixed;
     top: 0;
@@ -4342,3 +4346,4 @@ p {
     box-shadow: var(--shadow-purple);
 }
 /* ===== NAVBAR FIX ===== */
+
