@@ -235,8 +235,12 @@
             }
         }, 250));
 
-      
-
+        // Prevent body scroll when menu is open
+        window.addEventListener('scroll', () => {
+            if (mobileNav.classList.contains('active')) {
+                e.preventDefault();
+            }
+        }, { passive: false });
     };
 
     /* ----------------------------------------------------------------------
