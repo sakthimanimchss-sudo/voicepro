@@ -235,12 +235,8 @@
             }
         }, 250));
 
-        // Prevent body scroll when menu is open
-        window.addEventListener('scroll', () => {
-            if (mobileNav.classList.contains('active')) {
-                e.preventDefault();
-            }
-        }, { passive: false });
+      
+
     };
 
     /* ----------------------------------------------------------------------
@@ -778,7 +774,6 @@
         BREAKPOINTS
     };
 
-
 })();
 
 // RTL Toggle functionality for both desktop and mobile
@@ -816,3 +811,7 @@
         });
     }
 })();
+
+document.getElementById("themeToggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+});
