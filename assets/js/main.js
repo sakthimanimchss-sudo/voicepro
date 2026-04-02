@@ -815,3 +815,11 @@
         });
     }
 })();
+
+/* 🔍 To find the culprit element causing overflow: */
+/* Paste this in DevTools Console temporarily */
+
+document.querySelectorAll('*').forEach(el => {
+if (el.offsetWidth > document.body.offsetWidth)
+console.log(el);
+});
