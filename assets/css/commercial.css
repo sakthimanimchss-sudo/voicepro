@@ -2194,6 +2194,7 @@
 [data-theme="dark"] .breadcrumbs span {
     color: rgba(255,255,255,0.9) !important;
 }
+
 /* ========== Print Styles ========== */
 @media print {
     .page-header-commercial,
