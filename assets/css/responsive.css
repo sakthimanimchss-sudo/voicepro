@@ -1922,5 +1922,61 @@ body {
     }
 }
 
+/* --------------------------------------------------------------------------
+   FIX: Laptop (1024px) - Navbar alignment fix
+   -------------------------------------------------------------------------- */
 
+@media screen and (max-width: 1024px) {
+
+    /* Ensure nav is visible and properly laid out */
+    .header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Keep desktop nav visible at 1024px */
+    .nav-desktop {
+        display: flex !important;
+        align-items: center;
+        gap: var(--spacing-4);
+    }
+
+    .nav-links {
+        display: flex !important;
+        align-items: center;
+        gap: var(--spacing-3);
+        flex-wrap: nowrap;
+    }
+
+    .nav-link {
+        display: inline-flex !important;
+        font-size: var(--text-sm);
+        white-space: nowrap;
+        padding: var(--spacing-2) var(--spacing-2);
+    }
+
+    /* Dropdown menus */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 200;
+    }
+
+    /* Hide hamburger at 1024px — use mobile menu only below 768px */
+    .hamburger-menu {
+        display: none !important;
+    }
+
+    /* Only hide CTA button */
+    .nav-cta {
+        display: none !important;
+    }
+}
 
