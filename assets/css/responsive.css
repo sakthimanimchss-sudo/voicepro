@@ -1923,3 +1923,19 @@ body {
 }
 
 
+@media screen and (max-width: 1024px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+    }
+
+    .nav-menu {
+        display: none; /* hide desktop menu */
+    }
+
+    .hamburger-menu {
+        display: block; /* show mobile menu */
+    }
+}
